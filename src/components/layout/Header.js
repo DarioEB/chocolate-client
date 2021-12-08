@@ -27,14 +27,16 @@ const Header = () => {
     const [menu, setMenu] = useState(false);
 
     useEffect( () => {
-        const downloadBranchs = () => getBranchs();
-        const downloadCategories = () => getCategories();
-        downloadBranchs();
-        downloadCategories();
+        getBranchs();
         // eslint-disable-next-line
     }, []);
 
-    if(branchs.length === 0 || loadbranchs) {
+    useEffect( ( ) => {
+        getCategories();
+        // eslint-disable-next-line
+    }, []);
+
+    if(!branchs || loadbranchs) {
         return <Spin />
     }
 

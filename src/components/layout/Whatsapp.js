@@ -94,7 +94,9 @@ const CWhatsapp = styled.div`
 const Whatsapp = () => {
 
     const BranchContext = useContext(branchContext);
-    const { branchs } = BranchContext;
+    const { branchs, loadbranchs } = BranchContext;
+
+    if(!branchs || loadbranchs) return null;
 
     return(
         <CWhatsapp>

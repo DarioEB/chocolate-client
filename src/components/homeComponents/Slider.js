@@ -19,6 +19,7 @@ import SwiperCore, {
     Pagination,
     Navigation
 } from 'swiper/core';
+import Spin from '../layout/Spin';
 
 // Install swiper modules
 SwiperCore.use([Pagination, Autoplay, EffectFade, Navigation]);
@@ -128,7 +129,9 @@ background: radial-gradient(circle, rgba(31,32,34,0.11278014623818278) 0%, rgba(
 const Slider = () => {
 
     const Branch = useContext(branchContext);
-    const { branchs } = Branch;
+    const { branchs, loadbranchs } = Branch;
+
+    if(!branchs || loadbranchs) return <Spin />
 
     return (
         <section className="content-slider-home">
