@@ -483,6 +483,7 @@ button.box-navi_link {
   background-position: center center;
   background-size: cover;
   height: 100%;
+  background-color: var(--b);
   }
 .back-swiper-rooms {
   background-image: url('./images/room-mobile.jpg');
