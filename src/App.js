@@ -1,19 +1,13 @@
 import React from 'react';
-// Components 
 import Home from './components/Home';
 import Rooms from './components/Rooms';
 import Room from './components/Room';
 import Contact from './components/Contact';
-
-// Components Layout
 import Header from './components/layout/Header';
 import Whatsapp from './components/layout/Whatsapp';
 import Footer from './components/layout/Footer';
 import Into from './components/layout/Into';
-// Router
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
-// States
 import BranchState from './context/branch/branchState';
 import CategoryState from './context/category/categoryState';
 import RoomState from './context/room/roomState';
