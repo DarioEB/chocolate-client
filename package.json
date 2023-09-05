@@ -33,6 +33,10 @@
       "react-app/jest"
     ]
   },
+  "engines": {
+    "node": "16.x.x"
+  },
+  "engineStrict": true,
   "browserslist": [
     ">0.2%",
     "not dead",
